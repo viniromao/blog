@@ -1,5 +1,7 @@
 package com.blog.victor.domain;
 
+import lombok.Builder;
+import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.persistence.Column;
@@ -8,8 +10,9 @@ import java.time.LocalDateTime;
 
 
 @Entity
-@Slf4j
-public class BlogPost {
+@Data
+@Builder
+public class Post {
    @Column
    private String autor;
 
@@ -26,6 +29,6 @@ public class BlogPost {
    private String fonte;
 
    @Column
-   private String rodapé;
+   private String rodape;
 
 }
